@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<!-- 유효성 검증 스크립트 -->
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+				function search(){
+					switch(form.sh_ch.value){
+					case "1":
+ 						document.getElementById("name_sh").style.display="block";
+ 						document.getElementById("salary_sh").style.display="none";
+						break;
+					case "2":
+						document.getElementById("name_sh").style.display="none";
+ 						document.getElementById("salary_sh").style.display="block";
+						break;
+					}
+				}
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<form action="ex0413_01.jsp" name="form" method="post" onsubmit="return check()">
+			<h2>검색</h2>
+			
+			<select name="sh_ch" onclick="search()">
+				<option value="1">이름으로검색</option>
+				<option value="2">월급으로검색</option>
+			</select><br><br>
+			
+			
+			<div id="name_sh" style="display:none">
+			이름 : <input type="text" name="name">
+			</div>
+			
+			<div id="salary_sh" style="display:none">
+			시작값 : <input type="text" name="start"><br>
+			종료값 : <input type="text" name="end"><br>
+			</div>
+			
+			<fieldset>
+				<legend>정렬기준</legend>
+				<input type="radio" name="sort_type" value="sort1" id="sort1"><label for="sort1">사원번호 낮은 기준</label><br>
+				<input type="radio" name="sort_type" value="sort2" id="sort2"><label for="sort2">사원번호 높은 기준</label><br>
+				<input type="radio" name="sort_type" value="sort3" id="sort3"><label for="sort3">월급 낮은 기준</label><br>
+				<input type="radio" name="sort_type" value="sort4" id="sort4"><label for="sort4">월급 높은 기준</label><br>
+			</fieldset>
+			
+			<input type="submit" value="검색" >
+		</form>
+	</body>
+</html>
