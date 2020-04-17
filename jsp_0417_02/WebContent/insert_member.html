@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="insert_ok.jsp" name="i_form" method="post">
+			<!-- 회원 입력 폼 -->
+		아이디 : <input type="text" name="id"><br>
+		비밀번호 : <input type="text" name="pw"><br>
+		이름 : <input type="text" name="name"><br>
+		주소 : <input type="text" name="address"><br>
+		생일 : <input type="date" name="birth"><br>
+		<fieldset>
+			<legend>성별</legend>
+			<input type="radio" name="gender" value="남자">남성<br>
+			<input type="radio" name="gender" value="여자">여성<br>
+		</fieldset>
+		이메일 : <input type="text" name="email"><br>
+		<fieldset>
+			<legend>메일 수신여부</legend>
+			<input type="radio" name="news" value="예">예<br>
+			<input type="radio" name="news" value="아니오">아니오<br>
+		</fieldset>
+		휴대전화 : <input type="text" name="phone"><br>
+		<fieldset>
+			<legend>SMS수신여부</legend>
+			<input type="radio" name="SMS" value="예">예<br>
+			<input type="radio" name="SMS" value="아니오">아니오<br>
+		</fieldset>
+		
+		<input type="submit" value="가입하기">
+		<input type="reset" value="취소">
+		</form>
+	</body>
+</html>
